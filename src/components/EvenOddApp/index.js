@@ -3,12 +3,13 @@ import './index.css'
 
 class EvenOddApp extends Component {
   state = {generatedNumber: 0, result: 'Even'}
-
-  resultGot = () => {
+  
+    resultGot = () => {
     const newNumber = Math.ceil(Math.random() * 100)
-    const result = newNumber % 2 === 0 ? 'Even' : 'Odd'
+    const processing = newNumber % 2 === 0 ? 'Even' : 'Odd'
 
-    this.setState({generatedNumber: newNumber, result})
+    this.setState({generatedNumber: newNumber, result: processing}) // general notation 
+    //this.setState({generatedNumber: newNumber, result}) short hand notation of result
   }
 
   render() {
